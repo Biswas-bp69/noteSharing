@@ -1,0 +1,920 @@
+/* =========================================================
+   MODERN EDUCATIONAL DASHBOARD UI
+   Clean • Premium • Consistent • Responsive
+========================================================= */
+
+:root {
+
+  /* COLORS */
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #0f172a;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #f59e0b;
+  --bg: #f4f7fb;
+  --white: #ffffff;
+  --text: #0f172a;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+  --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  --hover-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+  --radius: 18px;
+  --transition: 0.25s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    sans-serif;
+
+  color: var(--text);
+  overflow-x: hidden;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--secondary);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+.card p {
+  color: white;
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  width: 100%;
+  margin-top: 100px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  background: linear-gradient(45deg, #001557, #031e6f);
+  backdrop-filter: blur(12px);
+
+  padding: 18px 30px;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo img {
+  width: 100%;
+  max-width: 170px;
+}
+
+header .navItems a {
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: var(--transition);
+}
+
+header .navItems a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 2px;
+
+  background: var(--primary);
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: var(--transition);
+}
+
+header .navItems a:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar {
+  display: flex;
+  margin-left: -60px;
+  margin-top: -45px;
+}
+
+#toggleBtn {
+  display: flex;
+  width: 47px;
+  height: 47px;
+  margin-bottom: 15px;
+  border: none;
+  background: var(--white);
+  color: var(--secondary);
+  padding: 0px;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  justify-content: end;
+  padding: 5px;
+  position: fixed;
+  margin-top: 7px;
+}
+
+#toggleBtn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   WELCOME SECTION
+========================================================= */
+
+.welcomeBg {
+  background: linear-gradient(135deg, #6986c6, #6b83c9);
+
+  border-radius: 28px;
+
+  padding: 40px;
+
+  color: white;
+
+  margin-bottom: 30px;
+
+  box-shadow:
+    0 15px 40px rgba(37, 99, 235, 0.22);
+}
+
+.welcomeBg h1,
+.welcomeBg p {
+  color: white;
+}
+
+.welcomeActive {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background:
+    rgba(255, 255, 255, 0.15);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.2);
+
+  color: white;
+
+  padding: 10px 20px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  backdrop-filter: blur(10px);
+}
+
+.welcomeMessage {
+  padding: 25px 30px;
+  border-radius: 25px;
+}
+
+
+.searchArea {
+  background: rgb(255 255 255);
+  padding: 0px 10px 0px 0px;
+  border-radius: 11px;
+  color: #051064;
+}
+
+.searchArea input {
+  border-radius: 5px 0px 0px 5px;
+}
+
+/* =========================================================
+   GLOBAL CARD STYLE
+========================================================= */
+
+.card,
+.uploadNote,
+table {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+}
+
+
+/* =========================================================
+   DASHBOARD STATS CARD
+========================================================= */
+
+.card {
+  padding: 28px;
+  transition: var(--transition);
+  height: 100%;
+  box-shadow: 0 8px 25px rgb(95 59 255 / 35%);
+  border: 1px solid rgba(255, 255, 255, .1);
+  background: linear-gradient(135deg, #98b7fb, #5f71a6);
+
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--hover-shadow);
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.card h3 span {
+  width: 65px;
+  height: 65px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #003faf 0%, #104aac 50%, #4364f7 100%);
+  color: white;
+
+}
+
+.card h3 i {
+  font-size: 28px;
+}
+
+.card h2 {
+  margin-top: 18px;
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+.cardBoxGraph {
+  width: 60px;
+  height: 32px;
+
+  border-radius: 10px;
+  background: rgb(13 113 169);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primaryBtn,
+.pageBtn,
+.redBtn,
+button {
+  border: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pageBtn {
+  background-color: #132f71;
+  color: white;
+  margin: 2px;
+}
+
+.primaryBtn {
+  background:
+    linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+  color: white;
+}
+
+.primaryBtn:hover,
+.pageBtn:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+
+.redBtn {
+  background: rgba(239, 18, 18, 0.711);
+
+  color: white;
+}
+
+.redBtn:hover {
+  background: var(--danger);
+  color: white;
+}
+
+.loveBtn {
+  background: linear-gradient(45deg, #0600ff, #040c64f7);
+  padding: 12px 18px;
+  border: 2px solid rgb(255 255 255);
+  border-radius: 62%;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageBtn.active {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+/* =========================================================
+   TABLE DESIGN
+========================================================= */
+
+table {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+  margin-top: 18px;
+}
+
+table th {
+  background:
+    #f8fafc;
+
+  color: var(--secondary);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  padding: 20px;
+}
+
+table td {
+  padding: 20px;
+  border-top: 1px solid var(--border);
+
+  color: var(--text-light);
+
+  font-size: 14px;
+}
+
+table tr {
+  transition: var(--transition);
+}
+
+table tr:hover {
+  background: #f8fbff;
+}
+
+.fa-trophy {
+  color: var(--warning);
+}
+
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+input,
+select,
+textarea,
+.form-control {
+
+  width: 100%;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 14px;
+
+  padding: 8px 16px;
+
+  background: white;
+
+  transition: var(--transition);
+
+  font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.form-control:focus {
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   UPLOAD FORM
+========================================================= */
+
+.uploadNote {
+  max-width: 650px;
+  margin: auto;
+
+  padding: 35px;
+}
+
+.uploadNote label {
+  margin-bottom: 8px;
+  display: block;
+
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.uploadNote p {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+
+/* =========================================================
+   NOTE CARD
+========================================================= */
+
+.noteCard {
+
+  padding: 20px;
+
+  transition: var(--transition);
+
+  overflow: hidden;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.noteBtns {
+  margin-top: auto;
+}
+
+.noteCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--hover-shadow);
+}
+
+.subjectBadge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+
+  border: 1px solid #bfdbfe;
+}
+
+
+
+
+
+
+
+
+
+
+.noteProfileImg {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2563eb;
+
+}
+
+.letterAvatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.usersName {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.usersEmail {
+  font-size: 11px;
+  color: #64748b;
+}
+
+/* =========================================
+   MODERN NOTE CARD
+========================================= */
+
+.noteCard {
+
+  background: white;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  border: 2px solid #2196f3;
+
+  transition: 0.35s ease;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+
+  height: 100%;
+
+  position: relative;
+}
+
+.noteCard:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.noteThumbnail {
+  height: 190px;
+  overflow: hidden;
+
+}
+
+.noteThumbnail img {
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.4s ease;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.noteCard:hover .noteThumbnail img {
+
+  transform: scale(1.06);
+}
+
+
+/* =========================================
+   TOP USER INFO
+========================================= */
+
+.noteTopInfo {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 22px;
+
+  margin-top: -30px;
+
+  position: relative;
+  z-index: 10;
+}
+
+.noteTopInfo {
+
+  background: transparent;
+
+  padding: 10px 14px;
+
+  border-radius: 60px;
+
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.noteProfileImg,
+.letterAvatar {
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 3px solid white;
+
+  flex-shrink: 0;
+}
+
+.noteProfileImg {
+
+  border: 3px solid #e5e7eb;
+}
+
+.letterAvatar {
+
+  background:
+    linear-gradient(135deg, #2563eb, #1e40af);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   USER TEXT
+========================================= */
+
+.usersName {
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.usersEmail {
+
+  font-size: 13px;
+
+  color: #6b7280;
+
+  margin-top: 2px;
+}
+
+
+/* =========================================
+   CATEGORY BADGE
+========================================= */
+
+.categoryBadge {
+
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 4px 11px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.noteContent {
+
+  padding: 0px 24px 22px;
+}
+
+.noteContent h3 {
+
+  font-size: 22px;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  line-height: 1.4;
+
+  margin-bottom: 16px;
+}
+
+.noteDescription {
+
+  color: #4b5563;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+
+/* =========================================
+   BUTTON AREA
+========================================= */
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.alert-box {
+
+  background:
+    rgba(22, 163, 74, 0.1);
+
+  color: var(--success);
+
+  border:
+    1px solid rgba(22, 163, 74, 0.2);
+
+  padding: 16px 20px;
+
+  border-radius: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SIDEBAR CLOSE
+========================================================= */
+
+.dashboard-layout.close .sidebar {
+  width: 0;
+  overflow: hidden;
+}
+
+.dashboard-layout.close .main {
+  margin-left: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .main {
+    padding:
+      90px 18px 30px;
+  }
+
+  .welcomeBg {
+    padding: 28px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .welcomeBg {
+    border-radius: 22px;
+  }
+
+  .card h2 {
+    font-size: 1.7rem;
+  }
+
+  .primaryBtn,
+  .pageBtn,
+  .redBtn,
+  button {
+
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  .main {
+    padding:
+      85px 14px 20px;
+  }
+
+  .welcomeBg {
+    padding: 22px;
+  }
+
+  .card h3 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card h3 span {
+    width: 58px;
+    height: 58px;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+}

@@ -1,0 +1,293 @@
+:root {
+  --indexBG: #f8fafc;
+  --indexLight: rgb(255, 255, 255);
+
+
+
+  /* COLORS */
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #0f172a;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #f59e0b;
+  --bg: #f4f7fb;
+  --white: #ffffff;
+  --text: #0f172a;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+  --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  --hover-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+  --radius: 18px;
+  --transition: 0.25s ease;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+  background: var(--indexBG);
+}
+
+header {
+  background: linear-gradient(45deg, #001557, #031e6f);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+nav ul li {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover,.nav-link:active,.nav-link:focus {
+  color: white;
+}
+
+
+
+.logo {
+  width: 100%;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+.loginBtn {
+  background: blue;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+.loginBtn a {
+  color: white;
+  text-decoration: none;
+}
+
+.loginBtn:hover {
+  background: #1e40af;
+  transition: var(--transition);
+  transition-duration: 0.3s;
+}
+
+section {
+  border-radius: 10px;
+}
+
+#homeSection {
+  padding: 10rem 0rem 0rem 0rem;
+  width: 100%;
+  height: calc(90vh - 100px);
+}
+
+section {
+  padding: 6rem 4rem;
+}
+
+.dash {
+  width: 100%;
+  height: 50vh;
+  background-image: url("../../assets/img/study.png");
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.main {
+  margin-top: 110px;
+}
+
+/* ///////////role section start  */
+#role {
+  width: 100%;
+  height: 90vh;
+  background: var(--indexLight);
+  padding: 10rem 0rem 0rem 0rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.role-card {
+  padding: 40px;
+  border-radius: 20px;
+  background: var(--indexBG);
+  border: 1px solid #f1f5f9;
+  transition: var(--transition);
+}
+
+.role-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition-duration: 0.3s;
+}
+
+ul {
+  padding: 0px 20px;
+}
+
+.role-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* feature section  */
+#feature {
+  width: 100%;
+  height: 90vh;
+  padding: 10rem 0rem 0rem 0rem;
+}
+
+.feat-card {
+  max-width: 250px;
+  background: var(--indexLight);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  border-top: 4px solid transparent;
+}
+
+.feat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-top-color: blue;
+  transition-duration: 0.3s;
+}
+
+.feat-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* // step section */
+#howItWork {
+  width: 100%;
+  height: 90vh;
+  background: var(--indexLight);
+  padding: 10rem 0rem 0rem 0rem;
+  margin-top: 4rem;
+}
+
+.step {
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.step-num {
+  width: 50px;
+  height: 50px;
+  background: blue;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+/* // technology section  */
+
+.tech-badge {
+  background: #f1f5f9;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.usesArea {
+  margin-top: 30px;
+}
+
+.contact-info {
+  max-width: 250px;
+  width: 100%;
+}
+
+/* /////  */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
+  background: white;
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+#contact {
+  padding: 10rem 0rem 0rem 0rem;
+
+}
+
+footer {
+  background: #02023c;
+  color: white;
+  padding: 60px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
